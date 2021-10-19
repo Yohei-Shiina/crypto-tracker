@@ -33,6 +33,7 @@ export default function Home({ filteredCoins }) {
         <div className="section-my-2">
           <CoinTable coins={allCoins} />
         </div>
+        {/* Todo add pagination */}
       </div>
     </Layout>
   )
