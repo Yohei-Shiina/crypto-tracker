@@ -8,12 +8,12 @@ function CoinTable(props) {
         <thead>
           <tr>
             <th></th>
-            <th>通貨</th>
-            <th>シンボル</th>
-            <th>現在価格</th>
-            <th>24H取引高</th>
+            <th>Currency</th>
+            <th>Symbol</th>
+            <th>Current Price</th>
+            <th>Volume</th>
             <th>24H</th>
-            <th>時価総額</th>
+            <th>Market Cap</th>
           </tr>
         </thead>
         <tbody>
