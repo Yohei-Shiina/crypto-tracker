@@ -45,9 +45,15 @@ export default function Home({ filteredCoins }) {
   )
 }
 
-export async function getServerSideProps(context) {
-  const res = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&page=1&sparkline=false');
-  const filteredCoins = await res.json()
+export async function getStaticProps(context) {
+  let filteredCoins = []
+  for(let i = 1; i < 10; i++){
+    const res = await fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=${i}&sparkline=false`);
+    const awaitedRes = await res.json()
+    filteredCoins = filteredCoins.concat(...awaitedRes)
+  }
+  
+  console.log(filteredCoins.length);
   return {
     props: { filteredCoins }, // will be passed to the page component as props
   }
