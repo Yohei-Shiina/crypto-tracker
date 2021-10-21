@@ -31,11 +31,14 @@ export default function Home({ filteredCoins }) {
         <div className="section-my-2">
           <Searchbar onChange={handleChange} />
         </div>
-        <Pagenation
+
+        {/* remove or delete if not use */}
+        {/* <Pagenation
           pageCount={10}
           pageRangeDisplayed={4}
           marginPagesDisplayed={0}
-        />
+        /> */}
+
         <div className="section-my-2">
           <CoinTable coins={allCoins} />
         </div>
@@ -45,7 +48,7 @@ export default function Home({ filteredCoins }) {
   )
 }
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   let filteredCoins = []
   for(let i = 1; i < 10; i++){
     const res = await fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=${i}&sparkline=false`);
