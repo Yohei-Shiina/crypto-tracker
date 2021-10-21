@@ -104,3 +104,39 @@ table{
 th, td {
   padding: 10px 0;
 }
+
+#react-paginate {
+  display: flex;
+  justify-content: center;
+}
+
+#react-paginate ul {
+  display: inline-block;
+  border: rgb(255, 225, 0) solid 1px;
+  border-radius: 5px;
+}
+
+#react-paginate li {
+  display: inline-block;
+  background-color: transparent;
+  border-right: rgba(255, 238, 0, 0.632) solid 1px;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+}
+
+#react-paginate li:hover{
+  background-color: rgba(255, 225, 0, 0.427);
+}
+
+#react-paginate a {
+  display: block;
+  line-height: 40px;
+  height: 100%;
+  /* width: 100%; */
+  color: rgb(255, 255, 255);
+}
+
+#react-paginate .selected{
+  background-color: rgba(255, 238, 0, 0.632);;
+}

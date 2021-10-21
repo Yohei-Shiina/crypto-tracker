@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import Searchbar from '../components/Searchbar'
 import CoinTable from '../components/CoinTable'
 import Layout from '../components/Layout/Layout';
+import Pagenation from '../components/Pagination'
 
 export default function Home({ filteredCoins }) {
   const [search, setSearch] = useState([])
@@ -30,6 +31,11 @@ export default function Home({ filteredCoins }) {
         <div className="section-my-2">
           <Searchbar onChange={handleChange} />
         </div>
+        <Pagenation
+          pageCount={10}
+          pageRangeDisplayed={4}
+          marginPagesDisplayed={0}
+        />
         <div className="section-my-2">
           <CoinTable coins={allCoins} />
         </div>

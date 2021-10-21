@@ -16,6 +16,6 @@
 }
 
 .coin_tr:hover{
-  background-color: rgb(124, 116, 0);
+  background-color: rgba(255, 238, 0, 0.632);
   cursor: pointer;
 }
